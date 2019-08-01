@@ -1,8 +1,5 @@
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
-
-
 <main role="main">
-
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,111 +38,275 @@
     </a>
   </div>
   <div class="container marketing">
+    <div id="Conerencistas">
       <h1 class="text-center">Conferencistas</h1>
-    <div class="row justify-content-md-center">
-      
-      <div class="col-lg-4">
-          <div  class="ratio img-responsive img-circle" 
-          style="background-image: url(https://images-expokinal2019.s3.amazonaws.com/batres.jpeg);"></div>
-        <h2>Fernando Javier Batres Velásquez</h2>
-        <p>Aplicaciones y el reto del desarrollo móvil</p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-          <div  class="ratio img-responsive img-circle" 
-          style="background-image: url(https://images-expokinal2019.s3.amazonaws.com/candelario.jpeg);"></div>
-        <h2>Candelario Morales Ajcot</h2>
-        <p>Taller de desarrollo de aplicaciones móviles con React Native y Amazon</p>
+      <div class="container-fluid">
+        <button *ngIf="identity.rol == 'ROLE_ADMIN'" type="button container-fluid" class="btn btn-primary"
+          data-toggle="modal" data-target="#modalAgregarConferencista">Agregar</button>
       </div>
-      <div class="col-lg-4">
-          <div  class="ratio img-responsive img-circle" 
-          style="background-image: url(https://images-expokinal2019.s3.amazonaws.com/ludwing.jpeg);"></div>
-        <h2>Ludwing Ixcayau</h2>
-        <p>Innovación Tecnológica con Traeguate</p>
-      </div>
-
-      
-      <div class="col-lg-4 ">
-        <div  class="ratio img-responsive img-circle" 
-          style="background-image: url(https://images-expokinal2019.s3.amazonaws.com/Luis+D%C3%A9leon-min.jpg);"></div>
-        <h2>Luis Mauricio Déleon Barquero</h2>
-        <p>Tomando decisiones informadas en los negocios, Big Data</p>
-      </div>
-    <div class="col-lg-4">
-        <div  class="ratio img-responsive img-circle" 
-        style="background-image: url(https://images-expokinal2019.s3.amazonaws.com/Dennis+L%C3%B3pez-min.jpg);"></div>
-      <h2>Dennis Roberto López Villagran</h2>
-      <p>Impresión 3D orientada a la educación en Guatemala
-      </p>
-    </div>
-    </div>
-    <hr class="featurette-divider">
-    <h1 class="text-center">Arcerca de las Conferencias</h1>
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Aplicaciones y el reto del desarrollo móvil
-        </h2>
-        <p class="lead text-justify">Entender como el mundo esta cambiando con la estrategia de movilidad. 
-          El desarrollo móvil ha despegado de una forma impresionante, lo que resulta en beneficio para quien se encuentran en 
-          el desarrollo de apps.</p>
-      </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-        height="500" src="https://images-expokinal2019.s3.amazonaws.com/1535197432-custom_mobile_app_development_aboveafter.png" alt=""> 
+      <div class="row justify-content-md-center">
+        <div class="col-lg-4">
+          <div class="ratio img-responsive img-circle"
+            style="background-image: url(https://extension.illinois.edu/stain/stains-hi/235.jpg);"></div>
+          <h2>NOMBRE</h2>
+          <p>DATOS</p>
+          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalEditarConferencista"
+            *ngIf="identity.rol == 'ROLE_ADMIN'">Editar</button>
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalElimiarConferencista"
+            *ngIf="identity.rol == 'ROLE_ADMIN'">Eliminar</button>
+        </div>
       </div>
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">React Native y Amazon
-        </h2>
-        <p class="lead text-justify">Desarrollar aplicaciones móviles con la agilidad e innovación de los servicios que ofrece Amazon Web Services. AWS ha dedicado esfuerzos en crear productos que permitan a equipos de desarrollo móvil innovar de forma más rápida, evitando que deban preocuparse por mantener y operar servicios de back-end. </p>
+    <div id="Entradas">
+      <hr class="featurette-divider">
+      <h1 class="text-center">Entradas</h1>
+      <div class="container-fluid">
+        <button *ngIf="identity.rol == 'ROLE_ADMIN'" type="button container-fluid" class="btn btn-primary"
+          data-toggle="modal" data-target="#modalAgregarEntrada">Agregar</button>
       </div>
-      <div class="col-md-5 order-md-1">
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">NOMBRE</h2>
+          <p class="lead text-justify">DESCRIPCION.</p>
+          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalEditarEntrada"
+            *ngIf="identity.rol == 'ROLE_ADMIN'">Editar</button>
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalElimiarEntrada"
+            *ngIf="identity.rol == 'ROLE_ADMIN'">Eliminar</button>
+        </div>
+        <div class="col-md-5">
           <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://images-expokinal2019.s3.amazonaws.com/aws%2Breact.jpg" alt=""> 
+            height="500" src="https://extension.illinois.edu/stain/stains-hi/235.jpg" alt="">
+        </div>
+        <hr class="featurette-divider">
       </div>
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Innovación Tecnológica con Traeguate</h2>
-        <p class="lead">Dar a conocer el emprendimiento tecnológico Traeguate como una plataforma destinada a mejorar el tráfico en Guatemala mediante la impulsion del carpooling: una forma segura, ecológica, económica y amistosa de viajar.</p>
-      </div>
-      <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://images-expokinal2019.s3.amazonaws.com/innovacion.png" alt=""> 
-      </div>
-    </div>
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Tomando decisiones informadas en los negocios, Big Data</h2>
-        <p class="lead">Demostrar a los participantes aspectos fundamentales de Big Data para el análisis y tratamiento de grandes volúmenes de datos  para convertirlos en valor para la toma de decisiones.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://images-expokinal2019.s3.amazonaws.com/Big-data.png" alt=""> 
-      </div>
-    </div>
-    <hr class="featurette-divider">
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Impresión 3D orientada a la educación en Guatemala</h2>
-        <p class="lead">Analizar el uso de las impresoras 3D en el contexto educativo, conociendo el proceso de impresión 3D, desde el diseño hasta la producción, así como la participación activa de los estudiantes. </p>
-      </div>
-      <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://images-expokinal2019.s3.amazonaws.com/3d-printer-3311587__340.png" alt=""> 
-      </div>
-    </div>
-    <hr class="featurette-divider">
-    
   </div>
+  <div class="modal fade" id="modalAgregarConferencista" tabindex="-1" role="dialog"
+  aria-labelledby="modalAgregarConferencista" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAgregarConferencista">Agregar Conferencista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-group">
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="form-control" id="Nombre" aria-describedby="nombre"
+                    placeholder="Ingrese el nombre del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Datos">Datos</label>
+                  <input type="text" class="form-control" id="Datos"
+                    placeholder="Ingrese los datos del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Imagen">Imagen</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Seleccione la imagen deseada</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL DE EDITAR CONFERENCISTA -->
+<div class="modal fade" id="modalEditarConferencista" tabindex="-1" role="dialog"
+  aria-labelledby="modalEditarConferencista" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarConferencista">Editar Conferencista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-group">
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="form-control" id="Nombre" aria-describedby="nombre"
+                    placeholder="Ingrese el nombre del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Datos">Datos</label>
+                  <input type="text" class="form-control" id="Datos"
+                    placeholder="Ingrese los datos del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Imagen">Imagen</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Seleccione la imagen deseada</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL ELIMIAR CONFERENCISTA -->
+<div class="modal fade" id="modalElimiarConferencista" tabindex="-1" role="dialog"
+  aria-labelledby="modalElimiarConferencista" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalElimiarConferencista">Eliminar Conferencista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro que quiere eliminarlo?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">Si</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL DE AGREGAR ENTRADA-->
+<div class="modal fade" id="modalAgregarEntrada" tabindex="-1" role="dialog" aria-labelledby="modalAgregarEntrada"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAgregarEntrada">Agregar Entrada</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-group">
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="form-control" id="Nombre" aria-describedby="nombre"
+                    placeholder="Ingrese el nombre del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Datos">DESCRIPCION</label>
+                  <input type="text" class="form-control" id="Datos"
+                    placeholder="Ingrese los datos del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Imagen">Imagen</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Seleccione la imagen deseada</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL DE EDITAR ENTRADA -->
+<div class="modal fade" id="modalEditarEntrada" tabindex="-1" role="dialog" aria-labelledby="modalEditarEntrada"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarEntrada">Editar Conferencista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-group">
+                  <label for="Nombre">Nombre</label>
+                  <input type="text" class="form-control" id="Nombre" aria-describedby="nombre"
+                    placeholder="Ingrese el nombre del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Datos">DESCRIPCION</label>
+                  <input type="text" class="form-control" id="Datos"
+                    placeholder="Ingrese los datos del Conferencista">
+                </div>
+                <div class="form-group">
+                  <label for="Imagen">Imagen</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Seleccione la imagen deseada</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL ELIMIAR Entrada -->
+<div class="modal fade" id="modalElimiarEntrada" tabindex="-1" role="dialog" aria-labelledby="modalElimiarEntrada"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalElimiarEntrada">Eliminar Conferencista</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro que quiere eliminarla?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">Si</button>
+      </div>
+    </div>
+  </div>
+</div>
   <footer class="container">
     <p>&copy; 2017-2019 Fundacion KINAL.</p>
   </footer>

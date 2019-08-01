@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 declare var $: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [UserService]
 })
 export class HomeComponent implements OnInit {
+  public identity;
 
-  constructor() { }
+  constructor(private _userService: UserService) { 
+    this.identity =  this._userService.getIdentity();
+  }
 
   ngOnInit() {
     $(window).scroll(function() {

@@ -1,0 +1,160 @@
+<body style="background-color:#000000  ">
+  <br><br>
+  <div class="container">
+    <header class="clearfix">
+      <span>EXPO KINAL<span class="bp-icon bp-icon-about"
+          data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+      <h1>Historia</h1>
+      <nav>
+        <a href="http://www.kinal.org.gt" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Formar a
+            jóvenes y adultos a través de una educación integral, con énfasis en las áreas técnicas y tecnológicas,
+            influyendo positivamente en su trabajo, su familia y la sociedad.</span></a>
+
+      </nav>
+    </header>
+    <div class="main">
+      <ul class="cbp_tmtimeline">
+        <button *ngIf="identity.rol == 'ROLE_ADMIN'" type="button container-fluid" class="btn btn-primary"
+          data-toggle="modal" data-target="#modalAgregarHistoria">Agregar</button>
+        <!-- EN EL LI PONES EL *ngFor="let tra of tracks" si no sabes como mira en walc y en el nav en la parte de los tracks-->
+        <li>
+          <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span></span> <span>Fecha</span></time>
+          <div class="cbp_tmlabel">
+            <h3>TITULO</h3>
+            <p>Descripcion.</p>
+            <img style="height: 300px; width: 550px"
+              src="https://image.freepik.com/vector-gratis/fondo-fallo-tecnico_23-2148072405.jpg">
+              <div class="row mx-auto">
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalEditarHistoria"
+                  *ngIf="identity.rol == 'ROLE_ADMIN'">Editar</button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalElimiarHistoria"
+                  *ngIf="identity.rol == 'ROLE_ADMIN'">Eliminar</button>
+              </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- MODAL DE AGREGAR HISTORIA -->
+  <div class="modal fade" id="modalAgregarHistoria" tabindex="-1" role="dialog" aria-labelledby="modalAgregarHistoria"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalAgregarHistoria">Agregar Historia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="Fecha">Fecha</label>
+                    <input type="text" class="form-control" id="Fecha" aria-describedby="Fecha"
+                      placeholder="Ingrese la fecha de la Historia">
+                  </div>
+                  <div class="form-group">
+                    <label for="Titulo">Titulo</label>
+                    <input type="text" class="form-control" id="Titulo" placeholder="Ingrese el titulo de la historia">
+                  </div>
+                  <div class="form-group">
+                    <label for="Descripcion">DESCRIPCION</label>
+                    <input type="text" class="form-control" id="Descripcion"
+                      placeholder="Ingrese la Descripcion de la historia">
+                  </div>
+                  <div class="form-group">
+                    <label for="Imagen">Imagen</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01">
+                      <label class="custom-file-label" for="inputGroupFile01">Seleccione la imagen deseada</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL DE EDITAR HISTORIA -->
+  <div class="modal fade" id="modalEditarHistoria" tabindex="-1" role="dialog" aria-labelledby="modalEditarHistoria"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditarHistoria">Editar Historia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <form>
+                  <div class="form-group">
+                    <label for="Fecha">Fecha</label>
+                    <input type="text" class="form-control" id="Fecha" aria-describedby="Fecha"
+                      placeholder="Ingrese la fecha de la Historia">
+                  </div>
+                  <div class="form-group">
+                    <label for="Titulo">Titulo</label>
+                    <input type="text" class="form-control" id="Titulo" placeholder="Ingrese el titulo de la historia">
+                  </div>
+                  <div class="form-group">
+                    <label for="Descripcion">DESCRIPCION</label>
+                    <input type="text" class="form-control" id="Descripcion"
+                      placeholder="Ingrese la Descripcion de la historia">
+                  </div>
+                  <div class="form-group">
+                    <label for="Imagen">Imagen</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01">
+                      <label class="custom-file-label" for="inputGroupFile01">Seleccione la imagen deseada</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL ELIMINAR -->
+  <div class="modal fade" id="modalElimiarHistoria" tabindex="-1" role="dialog" aria-labelledby="modalElimiarHistoria"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalElimiarHistoria">Eliminar esta parte de la historia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Está seguro que quiere eliminarla?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">Si</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -14,6 +14,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { HomelogComponent } from './components/homelog/homelog.component';
 import { NavComponent } from './components/nav/nav.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { SedeComponent } from './components/sede/sede.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     RegistroComponent,
     ConferenciasComponent,
     UsuariosComponent,
-    PerfilComponent
+    PerfilComponent,
+    SedeComponent
   ],
   imports: [
     BrowserModule,
